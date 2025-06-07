@@ -1,1 +1,1 @@
-#NixosHyprConf
+# WIP
