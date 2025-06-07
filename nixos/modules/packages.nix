@@ -20,12 +20,6 @@
       kitty
       swaynotificationcenter
 
-# Rofi + plugins
-      rofi-wayland
-      rofi-power-menu
-      rofi-calc
-      rofi-emoji
-
 # Wayland stuff
       xwayland
       wl-clipboard
