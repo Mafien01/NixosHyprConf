@@ -1,25 +1,28 @@
-{ config, pkgs, ... }: {
+# In your Hyprland module file, e.g., modules/hyprland.nix
+{ config, pkgs, ... }:
 
+{
   programs.hyprland = {
     enable = true;
 
-    settings = {
-      env = [
-        "WLR_DRM_NO_ATOMIC,1"           
-        "WLR_RENDERER_ALLOW_SOFTWARE,1" 
-        "WLR_USE_LIBINPUT,1"            
-        "WLR_NO_HARDWARE_CURSORS,1"     
+    # Correct way to add Hyprland configuration lines
+    extraConfig = ''
+      env = WLR_DRM_NO_ATOMIC,1
+      env = WLR_RENDERER_ALLOW_SOFTWARE,1
+      env = WLR_USE_LIBINPUT,1
+      env = WLR_NO_HARDWARE_CURSORS,1
 
-        "XDG_SESSION_TYPE,wayland"
-        "XDG_SESSION_DESKTOP,Hyprland"
+      env = XDG_SESSION_TYPE,wayland
+      env = XDG_SESSION_DESKTOP,Hyprland
 
-        "XCURSOR_SIZE,24"
+      env = XCURSOR_SIZE,24
 
-        "QT_QPA_PLATFORM,wayland"
-      ];
+      # Qt Wayland backend
+      env = QT_QPA_PLATFORM,wayland
 
-      xwayland.force_zero_scaling = true;
-
-    };
+      xwayland {
+        force_zero_scaling = true
+      }
+    '';
   };
 }
