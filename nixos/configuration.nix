@@ -8,19 +8,18 @@
 
   networking.hostName = "nixos";
 
+  i18n.defaultLocale = "en_US.UTF-8";
+
   time = {
     timeZone = "Asia/Almaty";
     hardwareClockInLocalTime = true;
   };
 
-  i18n.defaultLocale = "en_US.UTF-8";
-
 
   services.displayManager.ly.enable = true;
+  programs.hyprland.enable = true;
 
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
-  programs.hyprland.enable = true;
 
 
   nix.settings.experimental-features = ["nix-command" "flakes"];

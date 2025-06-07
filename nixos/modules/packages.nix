@@ -18,6 +18,7 @@
       waybar
       rofi-wayland
       kitty
+      swaynotificationcenter
 
 # Wayland stuff
       xwayland
