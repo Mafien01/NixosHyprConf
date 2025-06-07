@@ -45,6 +45,7 @@
       lazydocker
       fzf
       ripgrep
+      ncdu
 
 # Screenshotting
       grim
