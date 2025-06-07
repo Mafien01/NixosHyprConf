@@ -1,0 +1,5 @@
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+configuration {
+    font: "0xProto 12"; /* You can adjust the size (e.g., 10, 14) as needed */
+}
