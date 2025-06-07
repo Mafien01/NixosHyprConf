@@ -6,5 +6,6 @@
     ./modules/shell.nix
     ./modules/audio.nix
     ./modules/user.nix
+    ./modules/hyprland.nix
   ];
 }

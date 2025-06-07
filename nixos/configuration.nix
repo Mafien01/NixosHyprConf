@@ -15,9 +15,8 @@
     hardwareClockInLocalTime = true;
   };
 
-
   services.displayManager.ly.enable = true;
-  programs.hyprland.enable = true;
+
 
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
