@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
-# Hyprland specific env stored in hyprland.nix
+# Hyprland specific env stored in home-manager/configs/hypr/env.conf
 {
   environment.sessionVariables = {
     # NVIDIA Specific 
