@@ -3,9 +3,5 @@
 {
   programs.hyprland = {
     enable = true;
-
-    extraConfig = ''
-
-    '';
   };
 }
