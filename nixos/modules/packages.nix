@@ -9,6 +9,7 @@
       obs-studio
       mpv
       pwvucontrol
+      protonvpn-gui
 
 # Hyprland
       hyprpaper

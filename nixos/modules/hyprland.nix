@@ -1,11 +1,9 @@
-# In your Hyprland module file, e.g., modules/hyprland.nix
 { config, pkgs, ... }:
 
 {
   programs.hyprland = {
     enable = true;
 
-    # Correct way to add Hyprland configuration lines
     extraConfig = ''
       env = WLR_DRM_NO_ATOMIC,1
       env = WLR_RENDERER_ALLOW_SOFTWARE,1
@@ -23,6 +21,7 @@
       xwayland {
         force_zero_scaling = true
       }
+
     '';
   };
 }
