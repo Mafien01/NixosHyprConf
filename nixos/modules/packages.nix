@@ -20,6 +20,7 @@
       waybar
       kitty
       swaynotificationcenter
+      clipman
       fuzzel
 
 # # Rofi + plugins
