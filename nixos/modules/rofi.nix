@@ -1,6 +1,6 @@
 { pkgs, ...}: {
 
   nixpkgs.overlays = [(final: prev: {
-      (rofi-emoji.override { rofi-unwrapped = rofi-wayland-unwrapped; })
+      rofi-calc = prev.rofi-calc.override { rofi-unwrapped = prev.rofi-wayland-unwrapped; };
   })];
 }
