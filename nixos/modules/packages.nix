@@ -21,7 +21,7 @@
       kitty
       swaynotificationcenter
       clipman
-      fuzzel
+      rofi-wayland
       bemoji
       swayr
 
