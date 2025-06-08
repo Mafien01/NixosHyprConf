@@ -23,6 +23,7 @@
       clipman
       fuzzel
       bemoji
+      swayr
 
 # # Rofi + plugins
 #       rofi-wayland
