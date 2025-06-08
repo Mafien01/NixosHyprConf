@@ -20,12 +20,13 @@
       waybar
       kitty
       swaynotificationcenter
+      fuzzel
 
-# Rofi + plugins
-      rofi-wayland
-      rofi-top
-      rofimoji
-      rofi-power-menu
+# # Rofi + plugins
+#       rofi-wayland
+#       rofi-top
+#       rofimoji
+#       rofi-power-menu
 
 # Wayland stuff
       xwayland
