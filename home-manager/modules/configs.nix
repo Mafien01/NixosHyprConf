@@ -1,4 +1,4 @@
-let configDir = ../configs;
+let configDir = ../../dotfiles;
 in
 {
   home.file = {
