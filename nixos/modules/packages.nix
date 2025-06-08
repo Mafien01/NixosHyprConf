@@ -40,6 +40,7 @@
 
 # CLI
       neovim
+      tmux
       fastfetch
       tree
       file
