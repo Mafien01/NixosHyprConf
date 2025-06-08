@@ -19,10 +19,7 @@
       waybar
       kitty
       swaynotificationcenter
-# Wofi + plugins
-      wofi
-      wofi-emoji
-      wofi-power-menu
+      rofi-wayland
 
 # Wayland stuff
       xwayland
