@@ -22,6 +22,7 @@
       swaynotificationcenter
       clipman
       fuzzel
+      bemoji
 
 # # Rofi + plugins
 #       rofi-wayland
