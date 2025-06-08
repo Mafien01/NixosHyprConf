@@ -8,10 +8,9 @@
     ./modules/audio.nix
     ./modules/user.nix
     ./modules/hyprland.nix
-    ./modules/rofi.nix
   ];
 
   disabledModules = [
-    # Add modules to disable here
+    ./modules/rofi.nix
   ];
 }

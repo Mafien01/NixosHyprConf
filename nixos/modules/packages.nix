@@ -1,8 +1,9 @@
 { pkgs, ... }: {
 
   environment.systemPackages = with pkgs; [
+
 # Desktop apps
-    firefox
+      firefox
       discord
       telegram-desktop
       zapzap
@@ -19,7 +20,12 @@
       waybar
       kitty
       swaynotificationcenter
+
+# Rofi + plugins
       rofi-wayland
+      rofi-top
+      rofimoji
+      rofi-power-menu
 
 # Wayland stuff
       xwayland
