@@ -11,6 +11,7 @@
       mpv
       pwvucontrol
       protonvpn-gui
+      vesktop
 
 # Hyprland
       hyprpaper
