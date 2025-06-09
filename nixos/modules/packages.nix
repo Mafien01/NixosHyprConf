@@ -54,6 +54,10 @@
 # Screenshotting
       grim
       slurp
+#
+#Theming
+      catppuccin-grub
+      catppuccin-cursors.mochaLavender
 
 # Other
       home-manager
