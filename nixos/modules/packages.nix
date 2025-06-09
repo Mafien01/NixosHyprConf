@@ -10,7 +10,7 @@
       obs-studio
       mpv
       pwvucontrol
-      openvpn
+      wireguard-ui 
       vesktop
 
 # Hyprland
