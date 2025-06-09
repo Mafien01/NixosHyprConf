@@ -11,6 +11,7 @@
       mpv
       pwvucontrol
       wireguard-ui 
+      wireguard-tools
       vesktop
 
 # Hyprland
