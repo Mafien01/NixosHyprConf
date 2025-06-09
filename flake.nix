@@ -3,39 +3,23 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-
+  
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland/da3583fd5e86044d02af9fcfac84724e02545336";
-
-    hy3 = {
-      url = "github:outfoxxed/hy3";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, hy3, ... }: {
+  outputs = { nixpkgs, home-manager, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [ ./nixos/configuration.nix ];
     };
 
     homeConfigurations.mafien0 = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      modules = [
-        ./home-manager/home.nix
-        hyprland.homeManagerModules.default
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [ ./home-manager/home.nix ];
+      };
 
-        {
-          wayland.windowManager.hyprland = {
-            enable = true;
-            plugins = [ hy3.packages."x86_64-linux".hy3 ];
-          };
-        }
-      ];
-    };
   };
 }
