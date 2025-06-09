@@ -10,7 +10,7 @@
       obs-studio
       mpv
       pwvucontrol
-      protonvpn-gui
+      openvpn
       vesktop
 
 # Hyprland
@@ -25,12 +25,6 @@
       rofi-wayland
       bemoji
       swayr
-
-# # Rofi + plugins
-#       rofi-wayland
-#       rofi-top
-#       rofimoji
-#       rofi-power-menu
 
 # Wayland stuff
       xwayland
@@ -67,7 +61,7 @@
 # Other
       home-manager
       gcc
-      ];
+  ];
 
 
   fonts.packages = with pkgs; [
