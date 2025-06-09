@@ -7,13 +7,6 @@
     size = 24;
   };
 
-  services.xserver.pointerCursor = {
-    enable = true;
-    package = pkgs.catppuccin-cursors.mochaLavender;
-    name = "catppuccin-mocha-lavender-cursors";
-    size = 24;
-  };
-
   xsession.pointerCursor = {
     enable = true;
     package = pkgs.catppuccin-cursors.mochaLavender;
