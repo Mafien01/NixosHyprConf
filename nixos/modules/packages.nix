@@ -9,8 +9,6 @@
       zapzap
       obs-studio
       mpv
-      pwvucontrol
-      wireguard-ui 
       wireguard-tools
       vesktop
 
