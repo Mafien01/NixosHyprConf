@@ -4,13 +4,11 @@
 
 # Desktop apps
       firefox
-      discord
+      vesktop
       telegram-desktop
       zapzap
       obs-studio
       mpv
-      wireguard-tools
-      vesktop
 
 # Hyprland
       hyprpaper
