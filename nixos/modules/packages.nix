@@ -64,17 +64,18 @@
       gcc
   ];
 
-
-  fonts.packages = with pkgs; [
+fonts.packages = with pkgs; [
     noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
-      liberation_ttf
-      fira-code
-      fira-code-symbols
-      mplus-outline-fonts.githubRelease
-      dina-font
-      proggyfonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
+    nerdfonts.fira-code
+    nerdfonts.symbols-only
   ];
 
 }
