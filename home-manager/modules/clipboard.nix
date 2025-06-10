@@ -24,7 +24,7 @@
   systemd.user.services.cliphist-session-watcher = {
     description = "clipboard hystory watcher for current session";
 
-    after  = [ "graphical-session.target" ];
+    after  = "graphical-session.target";
     install = {
       WantedBy = [ "graphical-session.target" ];
     };
