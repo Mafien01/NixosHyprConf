@@ -23,6 +23,8 @@
     waybar
 
 # Wayland stuff
+    wl-clipboard
+    cliphist
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     xwayland
