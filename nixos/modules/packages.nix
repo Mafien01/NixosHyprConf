@@ -11,10 +11,6 @@
     zapzap
 
 # Hyprland
-    hyprcursor
-    hypridle
-    hyprlock
-    hyprpaper
     bemoji
     kitty
     rofi-wayland
