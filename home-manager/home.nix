@@ -1,7 +1,7 @@
 { config, lib, pkgs, ...}: {
 
 	imports = [
-		./modules.nix
+		./modules/modules.nix
 	];
 
 	home = {
