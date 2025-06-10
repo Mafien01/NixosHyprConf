@@ -50,6 +50,8 @@
       fzf
       ripgrep
       ncdu
+      killall
+      jq
 
 # Screenshotting
       grim
