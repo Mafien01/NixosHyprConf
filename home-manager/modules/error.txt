@@ -456,4 +456,4 @@ error:
          1140|       else
 
        error: A definition for option `systemd.user.services.cliphist-session-watcher.description' is not of type `attribute set of (boolean or signed integer or string or absolute path or list of (boolean or signed integer or string or absolute path))'. Definition values:
-       - In `/nix/store/ykrz0lqqkv58x3pxkz1wckmmdbzx3bjj-source/home-manager/modules/clipboard.nix': "clipboard hystory watcher for current session"
+       - In `/nix/store/r7lc6wjizv5qd6f79sls0xbkc6zqa24j-source/home-manager/modules/clipboard.nix': "clipboard hystory watcher for current session"

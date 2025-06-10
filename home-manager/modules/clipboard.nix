@@ -5,7 +5,7 @@
     description = "wipe cliphist on boot";
     serviceConfig  = {
           Type = "oneshot";
-          ExecStart = "${pkgs.cliphist}/bin/cliphist wipe";
+          ExecStart = "${lib.getExe pkgs.cliphist} wipe";
     };
   };
 
@@ -29,7 +29,7 @@
     };
     serviceConfig = {
       Type = "exec";
-      ExecStart = "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store";
+      ExecStart = "${lib.getExe pkgs.wl-clipboard} --type text --watch ${lib.getExe pkgs.cliphist} store";
       Restart = "on-failure";
       RestartSec = 5;
 
