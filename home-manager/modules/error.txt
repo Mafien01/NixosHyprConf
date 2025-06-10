@@ -1,3 +1,7 @@
+warning: Git tree '/home/mafien0/nix' is dirty
+warning: Git tree '/home/mafien0/nix' is dirty
+warning: Git tree '/home/mafien0/nix' is dirty
+warning: Git tree '/home/mafien0/nix' is dirty
 error:
        … while calling the 'derivationStrict' builtin
          at <nix/derivation-internal.nix>:37:12:
@@ -451,8 +455,5 @@ error:
              |           ^
          1140|       else
 
-       error: A definition for option `systemd.user.services.cliphist-session-watcher.after' is not of type `attribute set of (boolean or signed integer or string or absolute path or list of (boolean or signed integer or string or absolute path))'. Definition values:
-       - In `/nix/store/449px6j2s2an810hzb6p9534xahargzc-source/home-manager/modules/clipboard.nix':
-           [
-             "graphical-session.target"
-           ]
+       error: A definition for option `systemd.user.services.cliphist-session-watcher.description' is not of type `attribute set of (boolean or signed integer or string or absolute path or list of (boolean or signed integer or string or absolute path))'. Definition values:
+       - In `/nix/store/ykrz0lqqkv58x3pxkz1wckmmdbzx3bjj-source/home-manager/modules/clipboard.nix': "clipboard hystory watcher for current session"
