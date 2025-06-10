@@ -3,81 +3,79 @@
   environment.systemPackages = with pkgs; [
 
 # Desktop apps
-      firefox
-      vesktop
-      telegram-desktop
-      zapzap
-      obs-studio
-      mpv
+    librewolf
+    mpv
+    obs-studio
+    telegram-desktop
+    vesktop
+    zapzap
 
 # Hyprland
-      hyprpaper
-      hyprcursor
-      hypridle
-      hyprlock
-      waybar
-      kitty
-      swaynotificationcenter
-      clipman
-      rofi-wayland
-      bemoji
-      swayr
+    hyprcursor
+    hypridle
+    hyprlock
+    hyprpaper
+    bemoji
+    kitty
+    rofi-wayland
+    swaynotificationcenter
+    swayr
+    waybar
 
 # Wayland stuff
-      xwayland
-      wl-clipboard
-      cliphist
-      xdg-desktop-portal
-      xdg-desktop-portal-hyprland
+    cliphist
+    wl-clipboard
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
+    xwayland
 
 # CLI
-      neovim
-      tmux
-      fastfetch
-      tree
-      file
-      wget
-      curl
-      git
-      btop
-      zip
-      unzip
-      ffmpeg
-      cava
-      ntfs3g
-      lazygit
-      lazydocker
-      fzf
-      ripgrep
-      ncdu
-      killall
-      jq
+    btop
+    cava
+    curl
+    fastfetch
+    ffmpeg
+    file
+    fzf
+    git
+    jq
+    killall
+    lazydocker
+    lazygit
+    ncdu
+    neovim
+    ntfs3g
+    ripgrep
+    tmux
+    tree
+    unzip
+    wget
+    zip
 
 # Screenshotting
-      grim
-      slurp
-#
-#Theming
-      catppuccin-grub
-      catppuccin-cursors.mochaLavender
+    grim
+    slurp
+
+# Theming
+    catppuccin-cursors.mochaLavender
+    catppuccin-grub
 
 # Other
-      home-manager
-      gcc
+    gcc
+    home-manager
   ];
 
-fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk-sans
-  noto-fonts-emoji
-  liberation_ttf
-  fira-code
-  fira-code-symbols
-  mplus-outline-fonts.githubRelease
-  dina-font
-  proggyfonts
-  nerd-fonts.fira-code
-  nerd-fonts.symbols-only
+  fonts.packages = with pkgs; [
+    dina-font
+    fira-code
+    fira-code-symbols
+    liberation_ttf
+    mplus-outline-fonts.githubRelease
+    nerd-fonts.fira-code
+    nerd-fonts.symbols-only
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    proggyfonts
   ];
-
 }
