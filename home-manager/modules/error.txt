@@ -1,0 +1,458 @@
+error:
+       … while calling the 'derivationStrict' builtin
+         at <nix/derivation-internal.nix>:37:12:
+           36|
+           37|   strict = derivationStrict drvAttrs;
+             |            ^
+           38|
+
+       … while evaluating derivation 'home-manager-generation'
+         whose name attribute is located at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/pkgs/stdenv/generic/make-derivation.nix:480:13
+
+       … while evaluating attribute 'buildCommand' of derivation 'home-manager-generation'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/pkgs/build-support/trivial-builders/default.nix:80:17:
+           79|         enableParallelBuilding = true;
+           80|         inherit buildCommand name;
+             |                 ^
+           81|         passAsFile = [ "buildCommand" ] ++ (derivationArgs.passAsFile or [ ]);
+
+       … while calling the 'getAttr' builtin
+         at <nix/derivation-internal.nix>:50:17:
+           49|     value = commonAttrs // {
+           50|       outPath = builtins.getAttr outputName strict;
+             |                 ^
+           51|       drvPath = strict.drvPath;
+
+       … while calling the 'derivationStrict' builtin
+         at <nix/derivation-internal.nix>:37:12:
+           36|
+           37|   strict = derivationStrict drvAttrs;
+             |            ^
+           38|
+
+       … while evaluating derivation 'home-manager-files'
+         whose name attribute is located at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/pkgs/stdenv/generic/make-derivation.nix:480:13
+
+       … while evaluating attribute 'buildCommand' of derivation 'home-manager-files'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/pkgs/build-support/trivial-builders/default.nix:80:17:
+           79|         enableParallelBuilding = true;
+           80|         inherit buildCommand name;
+             |                 ^
+           81|         passAsFile = [ "buildCommand" ] ++ (derivationArgs.passAsFile or [ ]);
+
+       … while calling the 'concatStringsSep' builtin
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:357:13:
+          356|           ''
+          357|           + lib.concatStrings (
+             |             ^
+          358|             lib.mapAttrsToList (n: v: ''
+
+       … while calling anonymous lambda
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:358:36:
+          357|           + lib.concatStrings (
+          358|             lib.mapAttrsToList (n: v: ''
+             |                                    ^
+          359|               insertFile ${
+
+       … from call site
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:360:17:
+          359|               insertFile ${
+          360|                 lib.escapeShellArgs [
+             |                 ^
+          361|                   (sourceStorePath v)
+
+       … while calling 'concatMapStringsSep'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/strings.nix:231:13:
+          230|   concatMapStringsSep =
+          231|     sep: f: list:
+             |             ^
+          232|     concatStringsSep sep (map f list);
+
+       … while calling the 'concatStringsSep' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/strings.nix:232:5:
+          231|     sep: f: list:
+          232|     concatStringsSep sep (map f list);
+             |     ^
+          233|
+
+       … while calling 'escapeShellArg'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/strings.nix:1136:5:
+         1135|   escapeShellArg =
+         1136|     arg:
+             |     ^
+         1137|     let
+
+       … while evaluating a branch condition
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/strings.nix:1140:5:
+         1139|     in
+         1140|     if match "[[:alnum:],._+:@%/-]+" string == null then
+             |     ^
+         1141|       "'${replaceStrings [ "'" ] [ "'\\''" ] string}'"
+
+       … while calling the 'match' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/strings.nix:1140:8:
+         1139|     in
+         1140|     if match "[[:alnum:],._+:@%/-]+" string == null then
+             |        ^
+         1141|       "'${replaceStrings [ "'" ] [ "'\\''" ] string}'"
+
+       … while evaluating the second argument passed to builtins.match
+
+       … while calling the 'toString' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/strings.nix:1138:16:
+         1137|     let
+         1138|       string = toString arg;
+             |                ^
+         1139|     in
+
+       … from call site
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:361:20:
+          360|                 lib.escapeShellArgs [
+          361|                   (sourceStorePath v)
+             |                    ^
+          362|                   v.target
+
+       … while calling 'sourceStorePath'
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:20:5:
+           19|   sourceStorePath =
+           20|     file:
+             |     ^
+           21|     let
+
+       … while evaluating a branch condition
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:25:5:
+           24|     in
+           25|     if builtins.hasContext sourcePath then
+             |     ^
+           26|       file.source
+
+       … while calling the 'hasContext' builtin
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:25:8:
+           24|     in
+           25|     if builtins.hasContext sourcePath then
+             |        ^
+           26|       file.source
+
+       … while evaluating the argument passed to builtins.hasContext
+
+       … while calling the 'toString' builtin
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:22:20:
+           21|     let
+           22|       sourcePath = toString file.source;
+             |                    ^
+           23|       sourceName = config.lib.strings.storeFileName (baseNameOf sourcePath);
+
+       … from call site
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/files.nix:22:29:
+           21|     let
+           22|       sourcePath = toString file.source;
+             |                             ^
+           23|       sourceName = config.lib.strings.storeFileName (baseNameOf sourcePath);
+
+       … while calling anonymous lambda
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/attrsets.nix:1182:17:
+         1181|         mapAttrs (
+         1182|           name: value:
+             |                 ^
+         1183|           if isAttrs value && cond value then recurse (path ++ [ name ]) value else f (path ++ [ name ]) value
+
+       … from call site
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/attrsets.nix:1183:85:
+         1182|           name: value:
+         1183|           if isAttrs value && cond value then recurse (path ++ [ name ]) value else f (path ++ [ name ]) value
+             |                                                                                     ^
+         1184|         );
+
+       … while calling anonymous lambda
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:273:71:
+          272|           # For definitions that have an associated option
+          273|           declaredConfig = mapAttrsRecursiveCond (v: !isOption v) (_: v: v.value) options;
+             |                                                                       ^
+          274|
+
+       … while evaluating the attribute 'value'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1084:7:
+         1083|     // {
+         1084|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1085|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `home.file."/home/mafien0/.config/systemd/user/cliphist-session-watcher.service".source':
+
+       … while evaluating the attribute 'mergedValue'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1131:5:
+         1130|     # Type-check the remaining definitions, and merge them. Or throw if no definitions.
+         1131|     mergedValue =
+             |     ^
+         1132|       if isDefined then
+
+       … while evaluating a branch condition
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1132:7:
+         1131|     mergedValue =
+         1132|       if isDefined then
+             |       ^
+         1133|         if all (def: type.check def.value) defsFinal then
+
+       … while evaluating the attribute 'values'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1125:9:
+         1124|       {
+         1125|         values = defs''';
+             |         ^
+         1126|         inherit (defs'') highestPrio;
+
+       … while evaluating a branch condition
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1119:11:
+         1118|           # Avoid sorting if we don't have to.
+         1119|           if any (def: def.value._type or "" == "order") defs''.values then
+             |           ^
+         1120|             sortProperties defs''.values
+
+       … while calling the 'any' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1119:14:
+         1118|           # Avoid sorting if we don't have to.
+         1119|           if any (def: def.value._type or "" == "order") defs''.values then
+             |              ^
+         1120|             sortProperties defs''.values
+
+       … while evaluating the attribute 'values'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1252:7:
+         1251|     {
+         1252|       values = concatMap (def: if getPrio def == highestPrio then [ (strip def) ] else [ ]) defs;
+             |       ^
+         1253|       inherit highestPrio;
+
+       … while calling the 'concatMap' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1252:16:
+         1251|     {
+         1252|       values = concatMap (def: if getPrio def == highestPrio then [ (strip def) ] else [ ]) defs;
+             |                ^
+         1253|       inherit highestPrio;
+
+       … while calling the 'concatMap' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1099:17:
+         1098|         # Process mkMerge and mkIf properties.
+         1099|         defs' = concatMap (
+             |                 ^
+         1100|           m:
+
+       … while calling anonymous lambda
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1100:11:
+         1099|         defs' = concatMap (
+         1100|           m:
+             |           ^
+         1101|           map (
+
+       … while calling the 'map' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1101:11:
+         1100|           m:
+         1101|           map (
+             |           ^
+         1102|             value:
+
+       … while evaluating definitions from `/nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/misc/xdg.nix':
+
+       … from call site
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1110:80:
+         1109|               }
+         1110|           ) (addErrorContext "while evaluating definitions from `${m.file}':" (dischargeProperties m.value))
+             |                                                                                ^
+         1111|         ) defs;
+
+       … while calling 'dischargeProperties'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1203:5:
+         1202|   dischargeProperties =
+         1203|     def:
+             |     ^
+         1204|     if def._type or "" == "merge" then
+
+       … while evaluating a branch condition
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1204:5:
+         1203|     def:
+         1204|     if def._type or "" == "merge" then
+             |     ^
+         1205|       concatMap dischargeProperties def.contents
+
+       … while evaluating the attribute 'value'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:770:21:
+          769|             inherit (module) file;
+          770|             inherit value;
+             |                     ^
+          771|           }) module.config
+
+       … from call site
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:770:21:
+          769|             inherit (module) file;
+          770|             inherit value;
+             |                     ^
+          771|           }) module.config
+
+       … while calling anonymous lambda
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/attrsets.nix:1182:17:
+         1181|         mapAttrs (
+         1182|           name: value:
+             |                 ^
+         1183|           if isAttrs value && cond value then recurse (path ++ [ name ]) value else f (path ++ [ name ]) value
+
+       … from call site
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/attrsets.nix:1183:85:
+         1182|           name: value:
+         1183|           if isAttrs value && cond value then recurse (path ++ [ name ]) value else f (path ++ [ name ]) value
+             |                                                                                     ^
+         1184|         );
+
+       … while calling anonymous lambda
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:273:71:
+          272|           # For definitions that have an associated option
+          273|           declaredConfig = mapAttrsRecursiveCond (v: !isOption v) (_: v: v.value) options;
+             |                                                                       ^
+          274|
+
+       … while evaluating the attribute 'value'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1084:7:
+         1083|     // {
+         1084|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1085|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `xdg.configFile."systemd/user/cliphist-session-watcher.service".source':
+
+       (10 duplicate frames omitted)
+
+       … while evaluating definitions from `/nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/systemd.nix':
+
+       (6 duplicate frames omitted)
+
+       … while evaluating derivation 'cliphist-session-watcher.service'
+         whose name attribute is located at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/pkgs/stdenv/generic/make-derivation.nix:480:13
+
+       … while evaluating attribute 'text' of derivation 'cliphist-session-watcher.service'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/pkgs/build-support/trivial-builders/default.nix:129:13:
+          128|           inherit
+          129|             text
+             |             ^
+          130|             executable
+
+       … from call site
+         at /nix/store/j9vi4cb7v9g8bsvwxz2v26gxhypr1isr-source/modules/systemd.nix:54:18:
+           53|           name = pathSafeName;
+           54|           text = toSystemdIni serviceCfg;
+             |                  ^
+           55|           destination = "/${filename}";
+
+       … while calling 'toINI'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:250:5:
+          249|     }:
+          250|     attrsOfAttrs:
+             |     ^
+          251|     let
+
+       … from call site
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:264:5:
+          263|     # map input to ini sections
+          264|     mapAttrsToStringsSep "\n" mkSection attrsOfAttrs;
+             |     ^
+          265|
+
+       … while calling 'mapAttrsToStringsSep'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:254:21:
+          253|       mapAttrsToStringsSep =
+          254|         sep: mapFn: attrs:
+             |                     ^
+          255|         concatStringsSep sep (mapAttrsToList mapFn attrs);
+
+       … while calling the 'concatStringsSep' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:255:9:
+          254|         sep: mapFn: attrs:
+          255|         concatStringsSep sep (mapAttrsToList mapFn attrs);
+             |         ^
+          256|       mkSection =
+
+       … while calling 'mkSection'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:257:19:
+          256|       mkSection =
+          257|         sectName: sectValues:
+             |                   ^
+          258|         ''
+
+       … from call site
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:261:11:
+          260|         ''
+          261|         + toKeyValue { inherit mkKeyValue listsAsDuplicateKeys; } sectValues;
+             |           ^
+          262|     in
+
+       … while calling anonymous lambda
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:200:5:
+          199|     in
+          200|     attrs: concatStrings (concatLists (mapAttrsToList mkLines attrs));
+             |     ^
+          201|
+
+       … while calling the 'concatStringsSep' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:200:12:
+          199|     in
+          200|     attrs: concatStrings (concatLists (mapAttrsToList mkLines attrs));
+             |            ^
+          201|
+
+       … while calling the 'concatLists' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:200:27:
+          199|     in
+          200|     attrs: concatStrings (concatLists (mapAttrsToList mkLines attrs));
+             |                           ^
+          201|
+
+       … from call site
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/generators.nix:200:40:
+          199|     in
+          200|     attrs: concatStrings (concatLists (mapAttrsToList mkLines attrs));
+             |                                        ^
+          201|
+
+       … while calling 'mapAttrsToList'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/attrsets.nix:1079:23:
+         1078|   */
+         1079|   mapAttrsToList = f: attrs: attrValues (mapAttrs f attrs);
+             |                       ^
+         1080|
+
+       … while calling the 'attrValues' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/attrsets.nix:1079:30:
+         1078|   */
+         1079|   mapAttrsToList = f: attrs: attrValues (mapAttrs f attrs);
+             |                              ^
+         1080|
+
+       … while calling the 'mapAttrs' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/attrsets.nix:1079:42:
+         1078|   */
+         1079|   mapAttrsToList = f: attrs: attrValues (mapAttrs f attrs);
+             |                                          ^
+         1080|
+
+       … while calling anonymous lambda
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/types.nix:832:30:
+          831|                 loc: defs:
+          832|                 mapAttrs (n: v: v.value) (
+             |                              ^
+          833|                   filterAttrs (n: v: v ? value) (
+
+       … while evaluating the attribute 'value'
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1148:41:
+         1147|
+         1148|     optionalValue = if isDefined then { value = mergedValue; } else { };
+             |                                         ^
+         1149|   };
+
+       … while calling the 'throw' builtin
+         at /nix/store/x1lsj3bnjq6n909mjsnr6maf632bg41m-source/lib/modules.nix:1139:11:
+         1138|           in
+         1139|           throw "A definition for option `${showOption loc}' is not of type `${type.description}'. Definition values:${showDefs allInvalid}"
+             |           ^
+         1140|       else
+
+       error: A definition for option `systemd.user.services.cliphist-session-watcher.after' is not of type `attribute set of (boolean or signed integer or string or absolute path or list of (boolean or signed integer or string or absolute path))'. Definition values:
+       - In `/nix/store/449px6j2s2an810hzb6p9534xahargzc-source/home-manager/modules/clipboard.nix':
+           [
+             "graphical-session.target"
+           ]
