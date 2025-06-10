@@ -6,6 +6,6 @@
 
     ./programs/fish.nix
     ./programs/git.nix
-    ./programs/waybar.nix
+    #./programs/waybar.nix
 	];
 }
