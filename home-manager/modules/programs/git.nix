@@ -5,6 +5,6 @@
     userEmail = "93920918+Mafien01@users.noreply.github.com";
     extraConfig = {
       init.defaultBranch = "main";
-    }
-  }
+    };
+  };
 }
