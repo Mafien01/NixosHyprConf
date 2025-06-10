@@ -2,9 +2,10 @@
 	imports = [
     ./theme.nix
 
+    ./programs/hyprland/hyprland.nix
+
     ./programs/fish.nix
     ./programs/git.nix
-    ./programs/hyprland.nix
     ./programs/waybar.nix
 	];
 }
