@@ -8,9 +8,6 @@
     ./modules/audio.nix
     ./modules/user.nix
     ./modules/hyprland.nix
-  ];
-
-  disabledModules = [
-    ./modules/rofi.nix
+    ./modules/cleanup.nix
   ];
 }
