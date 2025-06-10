@@ -1,6 +1,6 @@
 { 
 	imports = [
-    ./modules/theme.nix
+    ./theme.nix
 
     ./programs/fish.nix
     ./programs/git.nix
