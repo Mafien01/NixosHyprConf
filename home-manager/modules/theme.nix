@@ -19,13 +19,4 @@
       gtk-cursor-theme-name = "catppuccin-mocha-lavender-cursors";
     };
   };
-
-  xsession = {
-    enable = true;
-    pointerCursor = {
-      package = pkgs.catppuccin-cursors.mochaLavender;
-      name = "catppuccin-mocha-lavender-cursors";
-      size = 24;
-    };
-  };
 }
