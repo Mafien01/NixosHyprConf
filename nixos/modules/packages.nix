@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
 
 # Desktop apps
-    librewolf
+    firefox
     mpv
     obs-studio
     telegram-desktop
