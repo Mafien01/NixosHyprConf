@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ pkgs, lib, ...}: {
   systemd.user.enable = true;
 
   systemd.user.services.cliphist-wipe-on-boot = {
