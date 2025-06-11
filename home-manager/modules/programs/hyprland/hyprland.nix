@@ -7,6 +7,8 @@
     hypridle
     hyprlock
     hyprpaper
+    kitty
+    swaynotificationcenter
   ];
 
   home.file = {

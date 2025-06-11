@@ -3,19 +3,14 @@
   environment.systemPackages = with pkgs; [
 
 # Desktop apps
-    firefox
     mpv
     obs-studio
     telegram-desktop
     vesktop
-    zapzap
 
 # Hyprland
     bemoji
-    kitty
     rofi-wayland
-    swaynotificationcenter
-    swayr
     waybar
 
 # Wayland stuff
@@ -53,7 +48,6 @@
     slurp
 
 # Theming
-    catppuccin-cursors.mochaLavender
     catppuccin-grub
 
 # Other

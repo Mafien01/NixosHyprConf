@@ -1,5 +1,9 @@
 { config, pkgs, ... }: {
 
+  home.packages = with pkgs; [
+    catppuccin-cursors.mochaLavender # Cursor
+  ];
+
   home.pointerCursor = {
     enable = true; 
     package = pkgs.catppuccin-cursors.mochaLavender;
