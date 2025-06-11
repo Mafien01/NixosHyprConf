@@ -32,10 +32,10 @@ in {
           "browser.aboutConfig.showWarning" = false;
           "browser.compactmode.show" = true;
           "browser.cache.disk.enable" = false;
-
           "widget.disable-workspace-management" = true;
           "browser.toolbars.bookmarks.visibility" = "never";
         };
+
         search = {
           force = true;
           default = "ddg";

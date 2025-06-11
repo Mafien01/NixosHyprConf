@@ -12,7 +12,7 @@
   ];
 
   home.file = {
-    ".config/hypr".source = ./config;
+    ".config/hypr".source = ./hypr;
   };
 
 }

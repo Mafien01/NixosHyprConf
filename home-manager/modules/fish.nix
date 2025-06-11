@@ -1,6 +1,21 @@
 { pkgs, ...}: {
 
-  programs.fish.enable = true;
+	programs.fish = {
+		enable = true;
+		shellAliases = {
+			nrs = "sudo nixos-rebuild switch --flake ~/nix";
+			nrb = "sudo nixos-rebuild boot --flake ~/nix";
+			hms = "home-manager switch --flake ~/nix";
+
+      v = "nvim";
+      vi = "nvim";
+      vim = "nvim";
+		};
+
+    interactiveShellInit = ''
+      set fish_greeting
+      '';
+	};
 
   programs.bash = {
     interactiveShellInit = ''
@@ -11,4 +26,4 @@
           fi
           '';
   };
-  }
+}
