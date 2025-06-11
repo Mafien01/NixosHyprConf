@@ -6,7 +6,6 @@
     ./modules/bootloader.nix
     ./modules/audio.nix
     ./modules/user.nix
-    ./modules/hyprland.nix
     ./modules/cleanup.nix
   ];
 }
