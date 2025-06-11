@@ -3,6 +3,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = ''
+    # config in .config/hypr/hyprland.conf
     '';
   };
 
