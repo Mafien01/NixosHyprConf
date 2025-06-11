@@ -1,6 +1,10 @@
 {pkgs, ...}: {
 
-  wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland = {
+    enable = true;
+    extraConfig = ''
+    '';
+  };
 
   home.packages = with pkgs; [
     hyprcursor
