@@ -1,23 +1,23 @@
-{pkgs, ...}: {
+{pkgs, config, ...}: {
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    extraConfig = ''
-    # config in .config/hypr/hyprland.conf
-    '';
-  };
-
+# essentials
   home.packages = with pkgs; [
     hyprcursor
     hypridle
     hyprlock
     hyprpaper
     kitty
-    swaynotificationcenter
   ];
 
+# hyprland
+  wayland.windowManager.hyprland = {
+    enable = true;
+    extraConfig = ''
+    # config in .config/hypr/hyprland.conf
+    '';
+  };
   home.file = {
     ".config/hypr".source = ./hypr;
   };
-
 }
+
