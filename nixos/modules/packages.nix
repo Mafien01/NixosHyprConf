@@ -7,11 +7,12 @@
     obs-studio
     telegram-desktop
     vesktop
+    prismlauncher
+    pwvucontrol
 
 # Hyprland
     bemoji
     rofi-wayland
-    waybar
 
 # Wayland stuff
     wl-clipboard
@@ -29,7 +30,6 @@
     file
     fzf
     git
-    jq
     killall
     lazydocker
     lazygit
