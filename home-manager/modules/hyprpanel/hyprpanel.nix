@@ -47,8 +47,11 @@
         };
       };
 
-      bar.launcher.autoDetectIcon = true;
-      bar.workspaces.show_numbered= true;
+      bar = {
+        launcher.autoDetectIcon = true;
+        workspaces.show_numbered= true;
+        clock.format = "%Y/%m/%d %H:%M:%S";
+      };
 
       menus = {
         clock = {
