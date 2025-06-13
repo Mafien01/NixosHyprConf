@@ -10,10 +10,6 @@
     prismlauncher
     pwvucontrol
 
-# Hyprland
-    bemoji
-    rofi-wayland
-
 # Wayland stuff
     wl-clipboard
     cliphist
