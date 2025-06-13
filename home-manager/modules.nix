@@ -5,6 +5,7 @@
 
     ./modules/hyprland/hyprland.nix
     ./modules/hyprpanel/hyprpanel.nix
+    ./modules/rofi/rofi.nix
 
     ./modules/fish.nix
     ./modules/git.nix
