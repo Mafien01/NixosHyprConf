@@ -4,21 +4,28 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
-    hyprpanel = {
-      url = "github:jas-singhfsu/hyprpanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprpanel = {
+      url = "github:jas-singhfsu/hyprpanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = inputs @ { 
     nixpkgs, 
     home-manager, 
     hyprpanel,
+    nvf,
     ... }: let
       system = "x86_64-linux";
     in {
@@ -39,7 +46,10 @@
           inherit system;
           inherit inputs;
         };
-        modules = [ ./home-manager/home.nix ];
+        modules = [ 
+          nvf.homeManagerModules.default
+          ./home-manager/home.nix 
+        ];
       };
   };
 }

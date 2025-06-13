@@ -30,7 +30,6 @@
     lazydocker
     lazygit
     ncdu
-    neovim
     ntfs3g
     ripgrep
     tmux
