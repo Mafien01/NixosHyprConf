@@ -6,6 +6,7 @@
     hypridle
     hyprlock
     hyprpaper
+    hyprpicker
     kitty
   ];
 
