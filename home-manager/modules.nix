@@ -1,15 +1,14 @@
-{ inputs, ...}: {
-
+{
 	imports = [
-    ./modules/theme.nix
+    ./modules/theme
 
-    ./modules/hyprland/hyprland.nix
-    ./modules/hyprpanel/hyprpanel.nix
-    ./modules/rofi/rofi.nix
+    ./modules/hyprland
+    ./modules/hyprpanel
+    ./modules/rofi
 
-    ./modules/fish.nix
-    ./modules/git.nix
-    ./modules/firefox.nix
-    ./modules/nvf.nix
+    ./modules/fish
+    ./modules/git
+    ./modules/firefox
+    ./modules/nvf
 	];
 }
