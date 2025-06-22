@@ -10,6 +10,13 @@
       v = "nvim";
       vi = "nvim";
       vim = "nvim";
+
+      die =  "shutdown now";
+      lsa = "ls -la";
+      c = "clear";
+      ff = "fastfetch";
+
+      confnix = "cd ~/nix && tmux new-session -s vim && tmux new-session -s cmd";
 		};
 
     interactiveShellInit = ''

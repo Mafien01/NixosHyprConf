@@ -5,17 +5,10 @@
 # Desktop apps
     mpv
     obs-studio
-    telegram-desktop
-    vesktop
     prismlauncher
     pwvucontrol
-
-# Wayland stuff
-    wl-clipboard
-    cliphist
-    xdg-desktop-portal
-    xdg-desktop-portal-hyprland
-    xwayland
+    telegram-desktop
+    vesktop
 
 # CLI
     btop
@@ -31,19 +24,25 @@
     lazygit
     ncdu
     ntfs3g
+    progress
     ripgrep
     tmux
     tree
     unzip
+    watch
     wget
     zip
+
+# Wayland stuff
+    cliphist
+    wl-clipboard
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
+    xwayland
 
 # Screenshotting
     grim
     slurp
-
-# Theming
-    catppuccin-grub
 
 # Other
     gcc
