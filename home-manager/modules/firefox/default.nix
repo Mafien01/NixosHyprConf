@@ -34,6 +34,7 @@ in {
           "browser.cache.disk.enable" = false;
           "widget.disable-workspace-management" = true;
           "browser.toolbars.bookmarks.visibility" = "never";
+          "ui.key.menuAccessKeyFocuses" = false;
         };
 
         search = {

@@ -28,7 +28,6 @@
         };
 
         languages = {
-          enableLSP = true;
           nix.enable = true;
           enableTreesitter = true;
         };
