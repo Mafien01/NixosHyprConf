@@ -1,14 +1,18 @@
-{ pkgs, ...}: {
-
-  environment.systemPackages = [
-    pkgs.catppuccin-gtk
-  ];
-
-  #  gtk = {
-  #    enable = true;
-  #    theme = {
-  #      package = pkgs.catppuccin-gtk;
-  #      name = 
-  #    };
-  #  };
+{inputs, ...}: {
+  imports = [inputs.catppuccin.homeManagerModules.catppuccin];
+  gtk = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+      accent = "lavender";
+      size = "standard";
+      tweaks = [ "normal" ];
+    };
+    icon = {
+      enable = true;
+      flavor = "mocha";
+      accent = "lavender";
+    };
+  };
 }

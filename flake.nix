@@ -19,6 +19,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin.url = "github:catppuccin/nix";
+
   };
 
   outputs = inputs @ { 
@@ -26,13 +28,18 @@
     home-manager, 
     hyprpanel,
     nvf,
+    catppuccin,
     ... }: let
       system = "x86_64-linux";
     in {
 
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
-      modules = [ ./nixos/configuration.nix ];
+      modules = [
+          ./nixos/configuration.nix
+          catppuccin.nixosModules.catppuccin
+          home-manager.nixosModules.home-manager
+        ];
     };
 
     homeConfigurations.mafien0 = home-manager.lib.homeManagerConfiguration {
@@ -48,6 +55,7 @@
         };
         modules = [ 
           nvf.homeManagerModules.default
+          catppuccin.homeManagerModules.catppuccin
           ./home-manager/home.nix 
         ];
       };
