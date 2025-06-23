@@ -1,15 +1,15 @@
 { pkgs, ... }: {
 
-  environment.systemPackages = with pkgs; [
+ environment.systemPackages = with pkgs; [
 
 # Desktop apps
-    mpv
     obs-studio
     prismlauncher
     pwvucontrol
     telegram-desktop
     vesktop
-
+    mpv
+    
 # CLI
     btop
     cava
@@ -38,6 +38,7 @@
     wl-clipboard
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
     xwayland
 
 # Screenshotting
