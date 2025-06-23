@@ -8,5 +8,6 @@
     ./modules/shell.nix
     ./modules/user.nix
     ./modules/cleanup.nix
+    ./modules/gnomeapps.nix
   ];
 }

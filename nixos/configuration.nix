@@ -18,7 +18,10 @@
   };
 
   services.displayManager.ly.enable = true;
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
 
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
