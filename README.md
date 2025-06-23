@@ -18,8 +18,6 @@ inside of [home-manager/modules/git/default.nix](https://github.com/Mafien01/Nix
 and after, in instalation clone not my repository, but yours
 
 
-## From existing config:
-
 ### Clone repostory as ~/nix
 ```
 git clone https://github.com/Mafien01/NixosHyprConf ~/nix
@@ -47,60 +45,5 @@ home-manager switch --flake ~/nix
 ### Reboot
 
 
-## From scratch
-Follow https://nixos.wiki/wiki/NixOS_Installation_Guide until **Partitioning**
-then, partiotion you drive like (recomment to use **cfdisk**)
 
-| Partition   | Size        | Type             |
-|-------------|-------------|------------------|
-| 1           | 512M        | Efi System       |
-| 2           | 4G          | Linux swap       |
-| 3           | what left   | Linux filesystem |
-
-### Label+format partiotions
-this is required because `hardware-configuration.nix` is using those to find needed partitions
-
-**All commands runs as `sudo su`**
-
-> Replace /dev/sda with you actual drive
-```
-mkfs.fat -F 32 /dev/sda1
-```
-```
-fatlabel /dev/sda1 NIXBOOT
-```
-```
-mkfs.ext4 /dev/sda3 -L NIXROOT
-```
-```
-mkswap -L "NIXSWAP" /dev/sda2
-```
-### Mount partitions
-
-```
-mount /dev/disk/by-label/NIXROOT /mnt
-```
-```
-mount --mkdir /dev/disk/by-label/NIXBOOT /mnt/boot
-```
-```
-swapon /dev/disk/by-label/NIXSWAP
-```
-### Continue following guide from 'Create NixOS config'
-in configuration.nix, install `git`
-
-
-### After installation of NixOS, clone repository as ~/nix
-```
-git clone https://github.com/Mafien01/NixosHyprConf ~/nix
-```
-### Rebuild nixos using ~/nix flake
-```
-sudo nixos-rebuild boot --flake ~/nix
-```
-### Switch home manager using ~/nix flake
-```
-home-manager switch --flake ~/nix
-```
-### Reboot
 
