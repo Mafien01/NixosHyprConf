@@ -55,7 +55,7 @@
         };
         modules = [ 
           nvf.homeManagerModules.default
-          catppuccin.homeManagerModules.catppuccin
+          catppuccin.homeModules.catppuccin
           ./home-manager/home.nix 
         ];
       };

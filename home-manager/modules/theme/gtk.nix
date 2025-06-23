@@ -1,5 +1,4 @@
 {inputs, ...}: {
-  imports = [inputs.catppuccin.homeManagerModules.catppuccin];
 
   catppuccin = {
     gtk = {

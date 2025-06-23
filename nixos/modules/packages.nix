@@ -9,6 +9,11 @@
     pwvucontrol
     telegram-desktop
     vesktop
+    
+    nautilus
+    eog
+    totem
+    gnome-calculator
 
 # CLI
     btop
