@@ -22,4 +22,8 @@
       set fish_greeting
       '';
 	};
+  catppuccin.fish = {
+    enable = true;
+    flavor = "mocha";
+  };
 }

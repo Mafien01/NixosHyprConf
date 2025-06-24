@@ -5,6 +5,7 @@
     ./modules/hyprland
     ./modules/hyprpanel
     ./modules/rofi
+    ./modules/kitty
 
     ./modules/fish
     ./modules/git

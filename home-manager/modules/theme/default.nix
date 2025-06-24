@@ -6,6 +6,6 @@
 
   catppuccin = lib.mkForce {
     flavor = "mocha";
-    #  enable = true;
+    enable = true;
   };
 }
