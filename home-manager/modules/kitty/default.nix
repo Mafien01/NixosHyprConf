@@ -10,7 +10,7 @@
       mouse_hide_wait = "-1.0";
       window_padding_width = 2;
 
-      font_family = "Fira Code";
+      font_family = "FiraCode Nerd Font";
     };
   };
   catppuccin.kitty = {
