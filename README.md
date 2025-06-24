@@ -15,22 +15,14 @@ inside of [home-manager/home.nix](https://github.com/Mafien01/NixosHyprConf/blob
 
 inside of [home-manager/modules/git/default.nix](https://github.com/Mafien01/NixosHyprConf/blob/main/home-manager/modules/git/default.nix): name and mail
 
+and copy your `hardware-configuration.nix` into nixos/hardware-configuration.nix
+
 and after, in instalation clone not my repository, but yours
 
 
 ### Clone repostory as ~/nix
 ```
 git clone https://github.com/Mafien01/NixosHyprConf ~/nix
-```
-### Copy you previus "hardware-configuration.nix" to ~/nix/nixos
-
-if your hardware conf is inside of /etc/nixos/ (by default its here), then run:
-
-```
-rm -f ~/nix/nixos/hardware-configuration.nix
-```
-```
-cp /etc/nixos/hardware-configuration.nix ~/nix/nixos/hardware-configuration.nix
 ```
 
 ### Rebuild nixos using ~/nix flake
