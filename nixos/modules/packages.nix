@@ -7,7 +7,6 @@
     prismlauncher
     pwvucontrol
     telegram-desktop
-    vesktop
     mpv
     
 # CLI
