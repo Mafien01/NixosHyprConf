@@ -8,6 +8,7 @@
     pwvucontrol
     telegram-desktop
     mpv
+    filezilla
     
 # CLI
     btop

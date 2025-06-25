@@ -1,4 +1,11 @@
-{pkgs, config, ...}: {
+{pkgs, ...}: {
+
+  imports = [
+    ./general.nix
+    ./keybinds.nix
+    ./env.nix
+    ./windowrules.nix
+  ];
 
 # essentials
   home.packages = with pkgs; [
@@ -13,12 +20,5 @@
 # hyprland
   wayland.windowManager.hyprland = {
     enable = true;
-    extraConfig = ''
-    # config in .config/hypr/hyprland.conf
-    '';
-  };
-  home.file = {
-    ".config/hypr".source = ./hypr;
   };
 }
-
