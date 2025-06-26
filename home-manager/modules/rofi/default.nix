@@ -6,6 +6,7 @@
   ];
 
   home.file = {
-    ".config/rofi".source = ./theme;
+    ".config/rofi/config.rasi".source = ./config.rasi;
+    ".config/rofi/catppuccin-mocha.rasi".source = ./catppuccin-mocha.rasi;
   };
 }

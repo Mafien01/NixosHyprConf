@@ -10,9 +10,12 @@
       v = "nvim";
       vi = "nvim";
       vim = "nvim";
+      
+      ls = "eza --icons=auto --classify --group-directories-first --header --time-style=long-iso";
+      l = "eza -la --icons=auto --classify --group-directories-first --header --time-style=long-iso";
+      lt = "eza --tree --icons=auto --classify --group-directories-first --header --time-style=long-iso";
 
       die =  "shutdown now";
-      lsa = "ls -la";
       c = "clear";
       ff = "fastfetch";
 
@@ -26,4 +29,8 @@
     enable = true;
     flavor = "mocha";
   };
+
+  home.packages = with pkgs; [
+    eza
+  ];
 }
