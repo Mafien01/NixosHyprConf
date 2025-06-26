@@ -5,6 +5,7 @@
     "$menu" = "rofi";
     "$explorer" = "nautilus";
     "$calc" = "gnome-calculator";
+    "$discord" = "vesktop";
 
     "$mod" = "SUPER";
 
@@ -19,9 +20,11 @@
       "$mod, Q, exec, $terminal"
       "$mod, B, exec, $browser"
       "$mod, E, exec, $explorer"
-      "$mod, D, exec, $calc"
+      "$mod, T, exec, $calc"
+      "$mod, D, exec, $discord"
 
       "$mod, Z, exec, hyprpicker -a"
+      "$mod, P, exec, waypaper"
 
       "$mod, Tab, exec, $menu -show window"
       "$mod, R, exec, $menu -show drun"
@@ -49,7 +52,7 @@
 
     ]
     ++(
-      # workspaces
+      # workspaces 1-9
       builtins.concatLists (builtins.genList (i:
         let ws = i + 1;
         in [
@@ -59,6 +62,7 @@
         )
           9)
       );
+
     bindm = [
       # Move windows with mouse
       "$mod, mouse:272, movewindow"

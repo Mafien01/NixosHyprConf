@@ -9,6 +9,9 @@
       # Calculator PART 1
       "float, class:^(org.gnome.Calculator)$"
 
+      # Waypaper
+      "float, class:^(waypaper)$"
+
       # XWayland video bridge fix
       "opacity 0.0 override, class:^(xwaylandvideobridge)$"
       "noanim, class:^(xwaylandvideobridge)$"
