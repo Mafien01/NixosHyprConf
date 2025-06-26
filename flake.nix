@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprpanel = {
-      url = "github:jas-singhfsu/hyprpanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,7 +26,6 @@
   outputs = inputs@{ 
     nixpkgs,
     home-manager,
-    hyprpanel,
     nvf,
     catppuccin,
     nixcord,
@@ -48,12 +42,12 @@
         inherit system;
         modules = [
           ./nixos/configuration.nix
-          catppuccin.nixosModules.catppuccin
-          home-manager.nixosModules.home-manager
+            catppuccin.nixosModules.catppuccin
+            home-manager.nixosModules.home-manager
         ];
 
         specialArgs = {
-          inherit inputs pkgs system;
+          inherit inputs system;
         };
       };
     };
