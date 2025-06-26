@@ -1,7 +1,7 @@
 {
-
   imports = [
     ./modules/packages.nix
+    ./modules/wayland.nix
     ./modules/graphics.nix
     ./modules/bootloader.nix
     ./modules/audio.nix

@@ -36,9 +36,6 @@
 # Wayland stuff
     cliphist
     wl-clipboard
-    xdg-desktop-portal
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-gtk
     xwayland
 
 # Screenshotting

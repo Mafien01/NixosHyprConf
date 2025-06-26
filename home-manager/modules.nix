@@ -4,6 +4,7 @@
 
     ./modules/hyprland
     ./modules/hyprpanel
+    ./modules/waypaper
     ./modules/rofi
     ./modules/kitty
 

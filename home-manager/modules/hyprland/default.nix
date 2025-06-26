@@ -12,7 +12,6 @@
     hyprcursor
     hypridle
     hyprlock
-    hyprpaper
     hyprpicker
     kitty
   ];

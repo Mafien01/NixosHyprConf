@@ -1,9 +1,9 @@
-{ config, lib, pkgs, ... }: {
+{ config, pkgs, lib, ... }: {
 
-	imports = [
-		./hardware-configuration.nix
-		./modules.nix
-	];
+  imports = [
+    ./hardware-configuration.nix
+    ./modules.nix
+  ];
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -18,11 +18,6 @@
   };
 
   services.displayManager.ly.enable = true;
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 

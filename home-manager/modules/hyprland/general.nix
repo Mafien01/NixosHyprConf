@@ -3,6 +3,7 @@
     exec-once = [
       "hyprpaper"
       "hyprpanel"
+      "waypaper --restore"
 
       # Set volume to #65%
       "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
@@ -10,9 +11,6 @@
       # Clipboard history
       "cliphist wipe"
       "wl-paste --type text --watch cliphist store"
-
-      # Desktop portal
-      "${./scripts/desktop-portal.sh}"
     ];
 
     general =  {
@@ -93,7 +91,6 @@
     input = {
       "kb_layout" = [ "us, ru" ];
       "kb_options" = "grp:alt_shift_toggle";
-      "resolve_binds_by_sym" = true;
       "follow_mouse" = 1;
       "sensitivity" = 0;
     };
