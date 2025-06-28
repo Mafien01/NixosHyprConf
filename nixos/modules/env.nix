@@ -15,7 +15,7 @@
     GDK_BACKEND = "wayland,x11";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
-    QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
 
     # Application Specific
     MOZ_ENABLE_WAYLAND = "1";

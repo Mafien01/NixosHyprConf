@@ -10,12 +10,17 @@
     "$mod" = "SUPER";
 
     bind = [
+      # temp
+      "$mod, N, exec, killall .waybar-wrapped ; waybar"
+
+
       "$mod, A, exec, hyprctl setprop active opaque toggle"
 
       "$mod, C, killactive,"
       "$mod, M, exit,"
       "$mod, V, togglefloating,"
       "$mod, F, fullscreen,"
+      "$mod, W, exec, killall -SIGUSR1 .waybar-wrapped"
 
       "$mod, Q, exec, $terminal"
       "$mod, B, exec, $browser"

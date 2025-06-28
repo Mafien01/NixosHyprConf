@@ -1,5 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
+    monitor = ",1920x1080@75,auto,1";
+
     exec-once = [
       "hyprpaper"
       "hyprpanel"
@@ -20,8 +22,8 @@
 
       "border_size" = 1;
 
-      "col.active_border" = "rgb(b4befe)";
-      "col.inactive_border" = "rgb(1e1e1e)";
+      "col.active_border" = "rgb(b7bdf8)";
+      "col.inactive_border" = "rgb(6e738d)";
 
       "layout" = "dwindle";
     };
