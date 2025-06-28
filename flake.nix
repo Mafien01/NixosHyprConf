@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration with unstable nixpkgs and Home Manager";
+	description = "NixOS configuration with unstable nixpkgs and Home Manager";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -9,8 +9,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nvf = {
       url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -27,44 +37,47 @@
     nixpkgs,
     home-manager,
     nvf,
+    nixvim,
+    hyprpanel,
     catppuccin,
     nixcord,
     ... }: let
-    system = "x86_64-linux";
+      system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-  in {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      pkgs = import nixpkgs {
         inherit system;
-        modules = [
-          ./nixos/configuration.nix
+        config.allowUnfree = true;
+      };
+    in {
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./nixos/configuration.nix
             catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
-        ];
+          ];
 
-        specialArgs = {
-          inherit inputs system;
+          specialArgs = {
+            inherit inputs system;
+          };
+        };
+      };
+
+      homeConfigurations = {
+        mafien0 = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            inherit inputs system;
+          };
+          modules = [
+            nvf.homeManagerModules.default
+            nixvim.homeModules.nixvim
+            catppuccin.homeModules.catppuccin
+            nixcord.homeModules.nixcord
+            ./home-manager/home.nix
+          ];
         };
       };
     };
-
-    homeConfigurations = {
-      mafien0 = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          inherit inputs system;
-        };
-        modules = [
-          nvf.homeManagerModules.default
-          catppuccin.homeModules.catppuccin
-          nixcord.homeModules.nixcord
-          ./home-manager/home.nix
-        ];
-      };
-    };
-  };
 }

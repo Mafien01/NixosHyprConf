@@ -1,5 +1,3 @@
-{ inputs, ... }:
-{
-  # imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
-
+{ pkgs, ...}: {
+  programs.hyprpanel.package = hyprpanel.packages.${pkgs.system}.default;
 }
