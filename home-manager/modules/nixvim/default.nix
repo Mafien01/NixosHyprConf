@@ -1,32 +1,48 @@
 {
-  programs.nixvim = {
-    enable = true;
+	imports = [
+		./lsp.nix
+	];
 
-    colorschemes = {
-      catppuccin.enable = true;
-    };
+	programs.nixvim = {
+		enable = true;
 
-    opts = {
-      tabstop = 2;
-      shiftwidth = 2;
+		colorschemes = {
+			catppuccin.enable = true;
+		};
+
+		opts = {
+			tabstop = 2;
+			shiftwidth = 2;
+			signcolumn = "no";
 			relativenumber = true;
+			number = true;
 			autoindent = true;
 			smartindent = true;
-    };
+			undofile = true;
+			formatoptions = "tcqj";
+		};
 
-    clipboard = {
-      register = "unnamedplus";
-    };
+		clipboard = {
+			register = "unnamedplus";
+		};
 
-    plugins = {
-      lualine.enable = true;
-			telescope.enable = true;
+
+		plugins = {
+			lualine.enable = true;
 			web-devicons.enable = true;
-			lsp.enable = true;
+			fidget.enable = true;
 
 			treesitter = {
 				enable = true;
 				settings.indent.enable = false;
+			};
+
+			telescope = {
+				enable = true;
+				extensions = {
+					fzf-native.enable = true;
+					ui-select.enable = true;
+				};
 			};
 		};
 
@@ -57,5 +73,5 @@
 			options.silent = true;
 		}
 		];
-  };
+	};
 }
