@@ -17,7 +17,6 @@
 			relativenumber = true;
 			number = true;
 			autoindent = true;
-			smartindent = true;
 			undofile = true;
 			formatoptions = "tcqj";
 		};
@@ -34,7 +33,7 @@
 
 			treesitter = {
 				enable = true;
-				settings.indent.enable = false;
+				settings.indent.enable = true;
 			};
 
 			telescope = {
