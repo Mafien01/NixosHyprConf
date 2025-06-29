@@ -32,6 +32,7 @@
     watch
     wget
     zip
+		lua
 
 # Wayland stuff
     cliphist

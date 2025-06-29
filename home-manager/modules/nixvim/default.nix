@@ -45,32 +45,33 @@
 			};
 		};
 
-		lsp = {
-			servers = {
-				nil_ls.enable = true;
-			};
-		};
-
 		keymaps = [
-		{
-			action = "<cmd>Telescope find_files<CR>";
-			key = "ff";
-			mode = ["n"];
-			options.silent = true;
-		}
+			{
+				action = "<cmd>Telescope find_files<CR>";
+				key = "ff";
+				mode = ["n"];
+				options.silent = true;
+			}
 
-		{
-			action = "<cmd>Telescope live_grep<CR>";
-			key = "fg";
-			mode = ["n"];
-			options.silent = true;
-		}
-		{
-			action = "<cmd>Telescope diagnostics<CR>";
-			key = "fd";
-			mode = ["n"];
-			options.silent = true;
-		}
+			{
+				action = "<cmd>Telescope live_grep<CR>";
+				key = "fg";
+				mode = ["n"];
+				options.silent = true;
+			}
+			{
+				action = "<cmd>diagnostics<CR>";
+				key = "fd";
+				mode = ["n"];
+				options.silent = true;
+			}
+
+			{
+				action = "<cmd>source %<CR>";
+				key = "rr";
+				mode = ["n"];
+				options.silent = true;
+			}
 		];
 	};
 }
