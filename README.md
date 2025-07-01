@@ -1,5 +1,7 @@
-# WIP
-not recommended to use
+# OLD AND NOT MAINTAINED
+switched to niri, and make separate repo for it
+
+[repo](https://github.com/Mafien01/NixOS-Niri)
 
 
 
